@@ -176,17 +176,31 @@ Hedge Funds
 
 ## Glossary
 Alpha - The measure of active return on investment. The performance of that investment against a suitable market index. An alpha of 1% means that the investment was 1% better than the market during the period of time in question.
+
 Active return - refers to a the segment of the investment portfolio return that is due to actively managing it rather than normal market movements. It is normally measured compared to a benchmark which could be an index return.
+
 R2 - R Squared (Coefficient of determination) - What proportion of the dependent variable is predicted by the independent variable.
+
 Sharpe Ratio - How well the return of the asset compensates the investor for the risk taken.
+
 Jensen's Alpha - The abnormal return of a security of a security or a portfolio of securities over the theoretical expected return.
+
 CAPM - Used to determine a theoretically appropriate required rate of return of an asset, to make a decision about adding assets to a well diversified portfolio.
+
 Risk - The chance that an investments risk is not what is expected. Risk is usually measured by the standard deviation of prior returns. Or the average return on a specific investment.
+
 Active risk - refers to a segment of an investment portfolio risk that is due to actively managing the portfolio rather than normal market movements. Like active return it is measured against a benchmark. It measures how well the portfolio follows the benchmark against which it is measured.
+
 Information Ratio - Is the measure of risk adjusted return of a portfolio. It is defined as active return divided by active risk or tracking error.
+
 Information Coefficient - Measures the predictive skill of the financial analysis. It is like correlation and measures what the analyst predicted against what actually happened.  
+
 Beta - The assets movement relative to the market (i.e and index S&P 500). For example if an assets beta is 1.5, it will move 1.5 times the way the market moves. Therefore the market portfolio has a beta of 1 and risk free returns have a beta of 0. Beta allows us to separate excess returns into 2 components. The market element and residual element.
+
 Residual Return/Risk - Risk/Return independent of a benchmark.
+
 Excess Returns are total returns less risk free returns.
+
 Systematic Risk - Risk inherent to the entire market or entire market segment. This kind of risk is unpredictable and impossible to completely avoid.
+
 S&P 500 - 500 of the largest stocks in the US.

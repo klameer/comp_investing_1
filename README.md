@@ -1,24 +1,59 @@
-I am able to learn anything if I set my mind to it.
+# Coursera Computational Investing Notes
+Course on how to technically analyse the stock market and make trading decisions based on data.
+All the code is on Python 27 using Pandas, Numpy, Matplotlib and QSTK which is a package introduced that makes it easy to download and analyse stock market data. The later assignments are done using Pandas Data Reader as a preference.
 
-## Module 8
-Jensen's Alpha
-The CAPM asserts that alpha must be zero if the return on the asset or portfolio represents the beta of the asset.
-Alpha is then a measure of the portfolio managers skill.
-An alpha of zero means that any payments to a portfolio manager is not worth it because you might as well invest that in the market.
+## Learning Objectives
+1. Become familiar with electronic markets
+2. Interpret Market Data
+3. Write software to visualize market data
+4. Create a market simulator
 
-Back testing - The process of testing a trading system on prior periods
-Run a simulation of your strategy on prior periods to test the feasibility of the strategy.
+## Module 1
+Introduction to computational investing. What a hedge fund is. The type of portfolio manager and how portfolio managers performance is measured.
 
+## Module 2
+How to value a company. The relationship between risk and return. What is the Capital Asset Pricing Model.
+Also installation of QSTK
 
-## Module 7
-Information feeds
-Reuters machine readable news
-StarMine
-InsiderInsights
+## Module 3
+Creating a portfolio, measuring portfolio performance and how to optimize a portfolio to get the maximum return for the risk undertaken.
 
+## MODULE 4
+What is the value of a company and how information affects equity prices and company value.
+Market Cap  - # Of Shares * Price per share
+Future Dividends - dividend/(1-gamma) gamma being the discount rate
+Book Value - If we split the company up, what is the sum of its parts
+
+Fundamental Analysis - If you think a company is more valuable than its current stock price then this is an opportunity. Value is the sum of book value and the present values of future returns (intrinsic value).
+
+Capital Assets Pricing Model (CAPM)
+Assumptions
+ - Return on stocks has two components
+    - Systematic
+    - Residual
+
+Efficient Frontier - Modern portfolio tool which shows investors the best return they can expect from their portfolio given the amount of risk they are willing to accept.
+
+## Module 5
+Event Studies and the Efficient Market Hypotheses. How to read an event study
+Arbitrage could mean what the price of an equity is on the market and what we believe its true value is.
+
+Two general approaches to determining value.
+Technical Analysis - Price and volume only
+Fundamental Analysis - Financial statements and metrics
+
+Where does the information come from
+Price/Volume : The market
+Fundamentals : SEC Filings
+News : Exogenous Sources
+
+Efficient Market Hypothesis
+Weak: Prices reflect all past and publicly available information. Prohibits profit from technical analysis. Fundamental information that hasn't yet been revealed and is taking some time to percolate in the news can be exploited.
+Semi Strong: Weak + Prices change instantly to reflect new publicly available information. Prohibits profit from technical analysis and fundamental analysis.
+Strong: Semi Strong + Prices react immediately. This includes insider trading. Hidden Information.
 
 ## Module 6
-Data
+The fundamental law You can improve your skill by making smaller bets.
 Survivor bias - When you are comparing a portfolio with what was there historically, you only see the companies that have survived. The data about the companies that died will not be in your analysis because they don't exist anymore.
 You need to make your analysis survivor bias free. This could be by taking many random portfolios and testing the trading strategy on all of them.
 
@@ -36,27 +71,40 @@ NaNs > 20 trading days
 Good data is important
 If you data isn't good you may discover false patterns in your data
 
+## Module 7
+More technical indicators and bollinger bands.
+Information feeds
+Reuters machine readable news
+StarMine
+InsiderInsights
 
-## Module 5
-Event Studies and the Efficient Market Hypotheses
-Arbitrage could mean what the price of an equity is on the market and what we believe its true value is.
+## Module 8
+Jensen's Alpha, back testing and machine learning.
+The CAPM asserts that alpha must be zero if the return on the asset or portfolio represents the beta of the asset.
+Alpha is then a measure of the portfolio managers skill.
+An alpha of zero means that any payments to a portfolio manager is not worth it because you might as well invest that in the market.
 
-Two general approaches to determining value.
-Technical Analysis - Price and volume only
-Fundamental Analysis - Financial statements and metrics
+Back testing - The process of testing a trading system on prior periods
+Run a simulation of your strategy on prior periods to test the feasibility of the strategy.
 
-Where does the information come from
-Price/Volume : The market
-Fundamentals : SEC Filings
-News : Exogenous Sources
+Main components of a back tester
+Historical data fed into the strategy  
+Strategy definition - Generates orders based on current information
+Market simulator - Executes orders
+Analysis engine - Assess quantitative performance of the result
 
-Efficient Market Hypothesis
-Weak: Prices reflect all past and publicly available information. Prohibits profit from technical analysis. Fundamental information that hasn't yet been revealed and is taking some time to percolate in the news can be exploited.
-Semi Strong: Weak + Prices change instantly to reflect new publicly available information. Prohibits profit from technical analysis and fundamental analysis.
-Strong: Semi Strong + Prices react immediately. This includes insider trading. Hidden Information.
+Important Features
+Historic data survivor bias free
 
+Machine Learning
+The construction or study of systems that can learn from data
+The goal is to create a model
+Takes input and gives you a prediction
+Observation - x
+Prediction - y
+In parametric models you learn the parameters
 
-# Metrics
+### Metrics
 These are what will be used in the website
 Annual Return - (Value End / Value Start) - 1
 Risk - Standard Deviation of daily returns
@@ -64,21 +112,12 @@ Sharpe Ratio - The higher the Sharpe Ratio the better. Reward over risk
     k* (mean(daily returns) / stdev(daily_rets))
     k = sqrt(250) for daily returns
 
-Common Metrics
+### Common Metrics
 Annual Return
 Risk: Standard Deviation of Return
 Risk Drawdown: How much the portfolio goes down when the market goes down
 Risk/Reward: Sharpe Ratio: How much reward you're getting for how much risk you're taking
 Risk/Reward: Sortino Ratio: Counts volatility up
-
-
-
-## Learning Objectives
-1. Become familiar with electronic markets
-2. Interpret Market Data
-3. Write software to visualize market data
-4. Create a market simulator
-
 
 
 Market Order - Buy or Sell at whatever the price. A market order buys shares at the lowest available price.
@@ -91,18 +130,6 @@ Crossing the spread is when someone raises the price they want to buy and buys s
 High frequency trading. Looks at the order book and sees if there are more people buying or selling and predicts marked movement based on this.
 Brokers facilitate short selling
 
-## MODULE 4 - What is the value of a company
-Market Cap  - # Of Shares * Price per share
-Future Dividends - dividend/(1-gamma) gamma being the discount rate
-Book Value - If we split the company up, what is the sum of its parts
-
-Fundamental Analysis - If you think a company is more valuable than its current stock price then this is an opportunity. Value is the sum of book value and the present values of future returns (intrinsic value).
-
-Capital Assets Pricing Model (CAPM)
-Assumptions
- - Return on stocks has two components
-    - Systematic
-    - Residual
 
 
 ## QSTK
@@ -142,7 +169,6 @@ na_normalized_price = na_price / na_price[0, : ] # divide by all columns in the 
 
 ```
 
-
 ## Resources
 wiki.quantsoftware.com
 Active Portfolio Management
@@ -160,8 +186,7 @@ Active risk - refers to a segment of an investment portfolio risk that is due to
 Information Ratio - Is the measure of risk adjusted return of a portfolio. It is defined as active return divided by active risk or tracking error.
 Information Coefficient - Measures the predictive skill of the financial analysis. It is like correlation and measures what the analyst predicted against what actually happened.  
 Beta - The assets movement relative to the market (i.e and index S&P 500). For example if an assets beta is 1.5, it will move 1.5 times the way the market moves. Therefore the market portfolio has a beta of 1 and risk free returns have a beta of 0. Beta allows us to separate excess returns into 2 components. The market element and residual element.
-
 Residual Return/Risk - Risk/Return independent of a benchmark.
 Excess Returns are total returns less risk free returns.
-
-S&P 500 500 of the largest stocks in the US.
+Systematic Risk - Risk inherent to the entire market or entire market segment. This kind of risk is unpredictable and impossible to completely avoid.
+S&P 500 - 500 of the largest stocks in the US.
